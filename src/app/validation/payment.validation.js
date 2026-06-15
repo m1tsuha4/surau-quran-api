@@ -20,9 +20,9 @@ class PaymentValidation {
           'string.min': 'Kode voucher minimal 3 karakter',
           'string.max': 'Kode voucher maksimal 50 karakter'
         }),
-      metodePembayaran: Joi.string().valid('TUNAI', 'PAYMENT_GATEWAY', 'NON_TUNAI').required()
+      metodePembayaran: Joi.string().valid('TUNAI', 'PAYMENT_GATEWAY', 'NON_TUNAI', 'MIDTRANS').required()
         .messages({
-          'any.only': 'Metode pembayaran harus TUNAI, PAYMENT_GATEWAY, atau NON_TUNAI',
+          'any.only': 'Metode pembayaran harus TUNAI, PAYMENT_GATEWAY, NON_TUNAI, atau MIDTRANS',
           'any.required': 'Metode pembayaran wajib diisi'
         }),
       evidence: Joi.string().optional()
