@@ -88,9 +88,9 @@ class SiswaValidation {
           'number.base': 'Total biaya harus berupa angka',
           'number.positive': 'Total biaya harus lebih dari 0'
         }),
-      metodePembayaran: Joi.string().valid('TUNAI', "PAYMENT_GATEWAY").required()
+      metodePembayaran: Joi.string().valid('TUNAI', 'PAYMENT_GATEWAY', 'NON_TUNAI').required()
         .messages({
-          'any.only': 'Metode pembayaran harus TUNAI atau PAYMENT_GATEWAY',
+          'any.only': 'Metode pembayaran harus TUNAI, PAYMENT_GATEWAY, atau NON_TUNAI',
           'any.required': 'Metode pembayaran wajib diisi'
         }),
       evidence: Joi.string().optional()
@@ -476,9 +476,9 @@ class SiswaValidation {
           'number.positive': 'Total biaya harus lebih dari 0',
           'any.required': 'Total biaya wajib diisi'
         }),
-      metodePembayaran: Joi.string().valid('TUNAI', "PAYMENT_GATEWAY").required()
+      metodePembayaran: Joi.string().valid('TUNAI', 'PAYMENT_GATEWAY', 'NON_TUNAI').required()
         .messages({
-          'any.only': 'Metode pembayaran harus TUNAI atau PAYMENT_GATEWAY',
+          'any.only': 'Metode pembayaran harus TUNAI, PAYMENT_GATEWAY, atau NON_TUNAI',
           'any.required': 'Metode pembayaran wajib diisi'
         }),
       evidence: Joi.string().optional()
